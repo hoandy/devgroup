@@ -187,9 +187,10 @@ static class UtilityFunctions
 				shipName = "ShipLR" + s.Size;
 				shipHeight = cellHeight - (SHIP_GAP * 2);
 				shipWidth = (cellWidth + cellGap) * s.Size - (SHIP_GAP * 2) - cellGap;
-			} else {
-				//Up down
-				shipName = "ShipUD" + s.Size;
+			} if (s.Direction == Direction.UpDown)
+            {
+                 
+                    shipName = "ShipUD" + s.Size;
 				shipHeight = (cellHeight + cellGap) * s.Size - (SHIP_GAP * 2) - cellGap;
 				shipWidth = cellWidth - (SHIP_GAP * 2);
 			}

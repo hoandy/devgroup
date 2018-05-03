@@ -133,9 +133,20 @@ public class SeaGrid : ISeaGrid
 				dRow = 1;
 				dCol = 0;
 			}
+            //if (direction == Direction.UpDown)
+            //{
+              //  dRow = 1;
+             //   dCol = 0;
+           // }
+           // else
+           // {
+           //     dRow = 0;
+           //     dCol = 1;
+           // }
 
-			//place ship's tiles in array and into ship object
-			int i = 0;
+
+            //place ship's tiles in array and into ship object
+            int i = 0;
 			for (i = 0; i <= size - 1; i++) {
 				if (currentRow < 0 | currentRow >= Width | currentCol < 0 | currentCol >= Height) {
 					throw new InvalidOperationException("Ship can't fit on the board");

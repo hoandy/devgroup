@@ -81,7 +81,7 @@ static class HighScoreController
 
 			s.Name = line.Substring(0, NAME_WIDTH);
 			s.Value = Convert.ToInt32(line.Substring(NAME_WIDTH));
-			_Scores.Add(s);
+            _Scores.Add(s);
 		}
 		input.Close();
 	}
@@ -101,8 +101,9 @@ static class HighScoreController
 		string filename = null;
 		filename = SwinGame.PathToResource("highscores.txt");
 
-		StreamWriter output = default(StreamWriter);
-		output = new StreamWriter(filename);
+        //StreamWriter output = default(StreamWriter);
+        StreamWriter output = null;
+        output = new StreamWriter(filename);
 
 		output.WriteLine(_Scores.Count);
 
@@ -201,6 +202,7 @@ static class HighScoreController
 			_Scores.RemoveAt(_Scores.Count - 1);
 			_Scores.Add(s);
 			_Scores.Sort();
+            SaveScores();
 
 			GameController.EndCurrentState();
 		}
