@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using SwinGameSDK;
 //added easydifficulty
+//fixed ship position
 /// <summary>
 /// The DeploymentController controls the players actions
 /// during the deployment phase.
