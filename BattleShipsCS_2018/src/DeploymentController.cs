@@ -6,7 +6,7 @@ using System.Collections.Generic;
 //using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
-
+//added easydifficulty
 /// <summary>
 /// The DeploymentController controls the players actions
 /// during the deployment phase.
